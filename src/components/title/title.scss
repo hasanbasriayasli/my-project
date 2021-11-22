@@ -1,0 +1,33 @@
+.page-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 86px;
+
+    &-text{
+        h1{
+            margin: 0;
+        }
+        p{
+            margin: 0;
+            font-size: 15px;
+            color: #b0b0b0;
+             >span{
+                color: black;
+             }
+        }
+    }
+    &-sorting{
+        >select{
+            height: 48px;
+            // width: 118px;
+            font-size: 17px;
+            color: #B0B0B0;
+            background-color: white;
+            border: 1px solid #B0B0B0;
+            line-height: 24px;
+            border-radius: 4px ;
+            padding: 0 8px;
+        }
+    }
+}
