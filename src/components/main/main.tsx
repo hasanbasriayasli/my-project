@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Context } from "../../App";
 import { Product as ProductType } from "../../modals/Product";
 import Pagination from "../pagination/pagination";
@@ -8,8 +8,10 @@ import "./main.scss";
 const Main = () => {
   const { products } = useContext<any>(Context);
   const [currentPage, setCurrentPage] = useState(1);
-  const pageRange = currentPage === 1 ? 0 : currentPage * 12;
-
+  const pageRange = currentPage === 1 ? 0 : (currentPage - 1 ) * 12;
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [products])
   return (
     <main className="page">
       <div className="page_content">
@@ -21,7 +23,7 @@ const Main = () => {
               })
           : null}
       </div>
-      <Pagination setCurrentPage={setCurrentPage} currentPage={currentPage} />
+      <Pagination setCurrentPage={setCurrentPage} currentPage={currentPage} totalPage={products?.length}/>
     </main>
   );
 };

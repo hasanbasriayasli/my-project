@@ -18,9 +18,19 @@
                 margin-right: 13px;
             }
             
-            &.active,&:hover{
+            &.active{
                 background-color: $vividOrange;
             }
+            &:not(.disabled){
+                &:hover{
+                    background-color: $vividOrange;
+                }
+            }
+            &.disabled {
+                opacity:0.6; 
+                cursor: not-allowed;       
+            }
+            
         }
     }
 }
