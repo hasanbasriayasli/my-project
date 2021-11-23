@@ -1,18 +1,19 @@
-import { useContext, useState } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import "./sidebar.scss";
 import { Context } from "../../App";
+import { Sorting } from "../../modals/Sorting";
 
 interface Props{
-  sorting: any[],
-  setSorting: Function
+  sorting: Sorting[],
+  setSorting: Dispatch<SetStateAction<Sorting[]>>
 }
 const SidebarSorting = ({sorting , setSorting}: Props) => {
   const { dispatch } = useContext<any>(Context);
 
   const handleChose = (index: number) => {
-    setSorting((prev: any) =>
-      prev.map((item: any, idx: number) => {
-        if (idx == index) {
+    setSorting((prev: Sorting[]) =>
+      prev.map((item: Sorting, idx: number) => {
+        if (idx === index) {
           return {
             ...item,
             active: !item?.active,
@@ -33,7 +34,7 @@ const SidebarSorting = ({sorting , setSorting}: Props) => {
   return (
     <nav className="nav">
       <ul className="nav-items">
-        {sorting.map((item: any, index: number) => (
+        {sorting.map((item: Sorting, index: number) => (
           <li
             key={index}
             className={`nav_items_item ${

@@ -1,9 +1,11 @@
+@import "../../styles/variables";
+
 .sidebar{
-    flex: 0 0 18%;
+    flex: 0 0 16%;
     &_title{
         font-weight: 500;
         line-height: 24px;
-        color: #484848;
+        color: $darkGray;
         margin: 24px 0 20px 0;
     }
 }
@@ -12,10 +14,11 @@
         &_item{
             font-size: 14px;
             line-height: 24px;
-            color: #646464;
+            color: $graniteGray;
+            cursor: pointer;
 
             &__active{
-                color: #FF6000;
+                color: $vividOrange;
             }
         }
     }

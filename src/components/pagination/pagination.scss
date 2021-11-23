@@ -1,21 +1,26 @@
+@import "../../styles/variables";
+
 .pagination{
     >ul{
         display: flex;
+        margin: 20px;
         li{
             display: flex;
             justify-content: center;
             align-items: center;
             width: 33px;
             height: 33px;
-            border: 1px solid #EEEEEE;
+            border: 1px solid $brightGray;
             border-radius: 9px ;
             cursor: pointer;
 
             &:not(:last-child){
                 margin-right: 13px;
             }
-
             
+            &.active,&:hover{
+                background-color: $vividOrange;
+            }
         }
     }
 }

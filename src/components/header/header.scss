@@ -1,6 +1,8 @@
+@import "../../styles/variables";
+
 .header {
     height: 96px;
-    background-color: #fff;
+    background-color: $white;
     border-bottom: 1px solid black;
 
     display: flex;
@@ -9,7 +11,7 @@
 
     &_logo {
         height: 35px;
-        color: #ff6000;
+        color: $vividOrange;
 
         > img {
             width: 100%;
@@ -20,7 +22,7 @@
         flex: 0 0 40%;
         height: 48px;
         border-radius: 100px;
-        background-color: #eeeeee;
+        background-color: $brightGray;
         display: flex;
         align-items: center;
 
@@ -54,7 +56,7 @@
 
     &_basket {
         position: relative;
-        border: 1px solid #b0b0b0;
+        border: 1px solid $gray69;
         border-radius: 4px;
         padding: 1px;
 
@@ -70,12 +72,13 @@
             height: 48px;
             width: 114px;
             font-size: 17px;
-            color: #b0b0b0;
-            background-color: white;
+            color: $gray69;
+            background-color: $white;
             line-height: 24px;
             position: relative;
             z-index: 7;
             border-color: transparent;
+            cursor: pointer;
 
             &_icon {
                 position: absolute;
@@ -84,11 +87,11 @@
                 width: 18px;
                 height: 18px;
                 border-radius: 50%;
-                background-color: #ff6000;
+                background-color: $vividOrange;
                 font-size: 12px;
                 font-weight: 500;
                 line-height: 12px;
-                color: #fff;
+                color: $white;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -100,9 +103,9 @@
             right: -1px;
             top: 45px;
             width: 360px;
-            background-color: white;
+            background-color: $white;
             z-index: 6;
-            border: 1px solid #b0b0b0;
+            border: 1px solid $gray69;
             border-radius: 5px;
             border-top-right-radius: 0;
             padding: 21px;
@@ -111,6 +114,11 @@
                 &_item {
                     display: flex;
                     align-items: stretch;
+
+                    &:not(:last-child){
+                        margin-bottom: 10px;
+                    }
+
                     &_img {
                         width: 47px;
                         height: 66px;
@@ -127,11 +135,12 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
+                        padding: 4px 0;
 
                         > p {
                             font-size: 12px;
                             line-height: 18px;
-                            color: #484848;
+                            color: $darkGray;
                         }
 
                         >button{
@@ -139,17 +148,58 @@
                             width: 47px;
                             font-size: 10px;
                             line-height: 18px;
-                            color:  #F90000;
-                            background-color: white;
-                            border: 1px solid #F90000;
+                            color:  $vividOrange;
+                            background-color:$white;
+                            border: 1px solid $vividOrange;
                             border-radius: 4px;
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            cursor: pointer;
                         }
                     }
                 }
             }
+        }
+    }
+
+    .modal_header{
+        font-size: 14px;
+        font-weight: bold;
+        color: $darkGray;
+        padding: 18px;
+        border: 1px solid $chineseSilver;
+    }
+
+    .modal_body{
+        font-size: 12px;
+        line-height: 17px;
+        color: $darkGray;
+        padding: 16px;
+    }
+
+    .modal_footer{
+        padding: 20px;
+        text-align: right;
+        &_confirm{
+            background-color: $yellowGreen;
+            color: $white;
+            border-radius: 4px;
+            border: none;
+            padding: 8px 10px;
+            margin-right: 10px;
+            min-width: 70px;
+            cursor: pointer;
+        }
+
+        &_cancel{
+            background-color: $jellyBean;
+            color: $white;
+            border-radius: 4px;
+            padding: 8px 16px;
+            border: none;
+            min-width: 70px;
+            cursor: pointer;
         }
     }
 }

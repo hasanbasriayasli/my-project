@@ -1,32 +1,40 @@
-import React, { useState, useContext, useRef } from "react";
+import { useState, useContext, Dispatch, SetStateAction } from "react";
 import "./header.scss";
-import { Context, Product } from "../../App";
+import { Context } from "../../App";
+import { Product } from "../../modals/Product";
+import BasketConfirmModal from "./basketConfirmModal";
 
 interface Props {
-  seacrhRef: any;
+  setSearch: Dispatch<SetStateAction<string>>;
+  search: string
 }
-const Header = ({ seacrhRef }: Props) => {
+const Header = ({ setSearch, search }: Props) => {
   const { dispatch, basket } = useContext<any>(Context);
   const [isBasket, setisBasket] = useState(false);
+  const [show, setShow] = useState(0);
+
   const handleSearch = (searchedWord: string) => {
-    seacrhRef.current = searchedWord;
+    setSearch(searchedWord);
     if (searchedWord.length > 1) {
-      dispatch({
-        type: "seacrh",
+      dispatch({ 
+        type: "search",
         searchedWord,
       });
-    } else if (searchedWord.length == 0) {
+    } else if (searchedWord.length === 0) {
       dispatch({
         type: "default",
       });
     }
   };
+
   const handleRemove = (productId: number) => {
     dispatch({
       type: "remove",
       productId,
     });
+    setShow(0);
   };
+
   return (
     <header className="header">
       <div className="header_logo">
@@ -40,11 +48,14 @@ const Header = ({ seacrhRef }: Props) => {
           type="text"
           className="header_search_wrapper_input"
           placeholder="25 milyon’dan fazla ürün içerisinde ara"
+          value={search}
           onChange={(e) => handleSearch(e?.target?.value)}
         />
       </div>
       <div
-        className={`header_basket ${basket?.length === 0 ? '' : 'header_basket_hover'}`}
+        className={`header_basket ${
+          basket?.length === 0 ? "" : "header_basket_hover"
+        }`}
         onMouseOver={() => setisBasket(true)}
         onMouseLeave={() => setisBasket(false)}
       >
@@ -54,26 +65,27 @@ const Header = ({ seacrhRef }: Props) => {
         </button>
         {isBasket && basket?.length > 0 && (
           <div className="header_basket_content">
-              <ul className="header_basket_content_items">
-                {basket?.map((item: Product) => {
-                  return (
-                    <li className="header_basket_content_items_item">
-                      <div className="header_basket_content_items_item_img">
-                        <img src={item?.image} />
-                      </div>
-                      <div className="header_basket_content_items_item_description">
-                        <p>{item?.name}</p>
-                        <button onClick={() => handleRemove(item?.productId)}>
-                          Kaldır
-                        </button>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
+            <ul className="header_basket_content_items">
+              {basket?.map((item: Product) => {
+                return (
+                  <li className="header_basket_content_items_item">
+                    <div className="header_basket_content_items_item_img">
+                      <img src={item?.image} />
+                    </div>
+                    <div className="header_basket_content_items_item_description">
+                      <p>{item?.name}</p>
+                      <button onClick={() => setShow(item?.productId)}>
+                        Kaldır
+                      </button>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         )}
       </div>
+      <BasketConfirmModal show={show} setShow={setShow} handleRemove={handleRemove} />
     </header>
   );
 };

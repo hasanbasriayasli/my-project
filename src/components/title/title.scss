@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .page-title{
     display: flex;
     justify-content: space-between;
@@ -11,9 +13,9 @@
         p{
             margin: 0;
             font-size: 15px;
-            color: #b0b0b0;
+            color: $gray69;
              >span{
-                color: black;
+                color: $black;
              }
         }
     }
@@ -22,12 +24,13 @@
             height: 48px;
             // width: 118px;
             font-size: 17px;
-            color: #B0B0B0;
-            background-color: white;
-            border: 1px solid #B0B0B0;
+            color: $gray69;
+            background-color: $white;
+            border: 1px solid $gray69;
             line-height: 24px;
             border-radius: 4px ;
             padding: 0 8px;
+            cursor: pointer;
         }
     }
 }

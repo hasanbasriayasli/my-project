@@ -1,4 +1,5 @@
-import { Product } from "../App";
+import { Product } from "../modals/Product";
+
 
 export const items: Product[] = [
     {
@@ -10,7 +11,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 90.85,
       createdDate: "2021-11-13T19:13:33.313Z",
-      active: true,
     },
     {
       productId: 2,
@@ -21,7 +21,6 @@ export const items: Product[] = [
       fullPrice: 900.0,
       discountPrice: 800.85,
       createdDate: "2021-11-13T19:14:33.313Z",
-      active: true,
     },
     {
       productId: 3,
@@ -32,7 +31,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 112.12,
       createdDate: "2021-11-13T19:15:33.313Z",
-      active: true,
     },
     {
       productId: 4,
@@ -43,7 +41,6 @@ export const items: Product[] = [
       fullPrice: 155.85,
       discountPrice: 132.47,
       createdDate: "2021-11-13T19:16:33.313Z",
-      active: true,
     },
     {
       productId: 5,
@@ -54,7 +51,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 100.85,
       createdDate: "2021-11-13T19:13:33.313Z",
-      active: true,
     },
     {
       productId: 6,
@@ -65,7 +61,6 @@ export const items: Product[] = [
       fullPrice: 150.0,
       discountPrice: 122.85,
       createdDate: "2021-11-13T17:13:33.313Z",
-      active: true,
     },
     {
       productId: 7,
@@ -76,7 +71,6 @@ export const items: Product[] = [
       fullPrice: 600.0,
       discountPrice: 400.85,
       createdDate: "2021-11-13T21:14:33.313Z",
-      active: true,
     },
     {
       productId: 8,
@@ -87,7 +81,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 112.12,
       createdDate: "2021-11-13T19:20:33.313Z",
-      active: true,
     },
     {
       productId: 9,
@@ -98,7 +91,6 @@ export const items: Product[] = [
       fullPrice: 140.85,
       discountPrice: 110.47,
       createdDate: "2021-11-13T19:19:33.313Z",
-      active: true,
     },
     {
       productId: 10,
@@ -109,7 +101,6 @@ export const items: Product[] = [
       fullPrice: 144.0,
       discountPrice: 100.85,
       createdDate: "2021-11-13T19:11:33.313Z",
-      active: true,
     },
     {
       productId: 11,
@@ -120,7 +111,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 90.85,
       createdDate: "2021-11-13T19:13:33.313Z",
-      active: true,
     },
     {
       productId: 12,
@@ -131,7 +121,6 @@ export const items: Product[] = [
       fullPrice: 900.0,
       discountPrice: 800.85,
       createdDate: "2021-11-13T19:14:33.313Z",
-      active: true,
     },
     {
       productId: 13,
@@ -142,7 +131,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 112.12,
       createdDate: "2021-11-13T19:15:33.313Z",
-      active: true,
     },
     {
       productId: 14,
@@ -153,7 +141,6 @@ export const items: Product[] = [
       fullPrice: 155.85,
       discountPrice: 132.47,
       createdDate: "2021-11-13T19:16:33.313Z",
-      active: true,
     },
     {
       productId: 15,
@@ -164,7 +151,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 100.85,
       createdDate: "2021-11-13T19:13:33.313Z",
-      active: true,
     },
     {
       productId: 16,
@@ -175,7 +161,6 @@ export const items: Product[] = [
       fullPrice: 150.0,
       discountPrice: 122.85,
       createdDate: "2021-11-13T17:13:33.313Z",
-      active: true,
     },
     {
       productId: 17,
@@ -186,7 +171,6 @@ export const items: Product[] = [
       fullPrice: 600.0,
       discountPrice: 400.85,
       createdDate: "2021-11-13T21:14:33.313Z",
-      active: true,
     },
     {
       productId: 18,
@@ -197,7 +181,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 112.12,
       createdDate: "2021-11-13T19:20:33.313Z",
-      active: true,
     },
     {
       productId: 19,
@@ -208,7 +191,6 @@ export const items: Product[] = [
       fullPrice: 140.85,
       discountPrice: 110.47,
       createdDate: "2021-11-13T19:19:33.313Z",
-      active: true,
     },
     {
       productId: 20,
@@ -219,7 +201,6 @@ export const items: Product[] = [
       fullPrice: 144.0,
       discountPrice: 100.85,
       createdDate: "2021-11-13T19:11:33.313Z",
-      active: true,
     },
     {
       productId: 21,
@@ -230,7 +211,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 90.85,
       createdDate: "2021-11-13T19:13:33.313Z",
-      active: true,
     },
     {
       productId: 22,
@@ -241,7 +221,6 @@ export const items: Product[] = [
       fullPrice: 900.0,
       discountPrice: 800.85,
       createdDate: "2021-11-13T19:14:33.313Z",
-      active: true,
     },
     {
       productId: 23,
@@ -252,7 +231,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 112.12,
       createdDate: "2021-11-13T19:15:33.313Z",
-      active: true,
     },
     {
       productId: 24,
@@ -263,7 +241,6 @@ export const items: Product[] = [
       fullPrice: 155.85,
       discountPrice: 132.47,
       createdDate: "2021-11-13T19:16:33.313Z",
-      active: true,
     },
     {
       productId: 25,
@@ -274,7 +251,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 100.85,
       createdDate: "2021-11-13T19:13:33.313Z",
-      active: true,
     },
     {
       productId: 26,
@@ -285,7 +261,6 @@ export const items: Product[] = [
       fullPrice: 150.0,
       discountPrice: 122.85,
       createdDate: "2021-11-13T17:13:33.313Z",
-      active: true,
     },
     {
       productId: 27,
@@ -296,7 +271,6 @@ export const items: Product[] = [
       fullPrice: 600.0,
       discountPrice: 400.85,
       createdDate: "2021-11-13T21:14:33.313Z",
-      active: true,
     },
     {
       productId: 28,
@@ -307,7 +281,6 @@ export const items: Product[] = [
       fullPrice: 124.0,
       discountPrice: 112.12,
       createdDate: "2021-11-13T19:20:33.313Z",
-      active: true,
     },
     {
       productId: 29,
@@ -318,7 +291,6 @@ export const items: Product[] = [
       fullPrice: 140.85,
       discountPrice: 110.47,
       createdDate: "2021-11-13T19:19:33.313Z",
-      active: true,
     },
     {
       productId: 30,
@@ -329,7 +301,6 @@ export const items: Product[] = [
       fullPrice: 144.0,
       discountPrice: 100.85,
       createdDate: "2021-11-13T19:11:33.313Z",
-      active: true,
     },
     {
       productId: 31,
@@ -340,7 +311,6 @@ export const items: Product[] = [
       fullPrice: 150.0,
       discountPrice: 122.85,
       createdDate: "2021-11-13T17:13:33.313Z",
-      active: true,
     },
     {
       productId: 32,
@@ -351,7 +321,6 @@ export const items: Product[] = [
       fullPrice: 500.0,
       discountPrice: 400.85,
       createdDate: "2021-11-13T21:10:33.313Z",
-      active: true,
     },
     {
       productId: 33,
@@ -362,7 +331,6 @@ export const items: Product[] = [
       fullPrice: 194.0,
       discountPrice: 162.12,
       createdDate: "2021-11-13T24:20:33.313Z",
-      active: true,
     },
     {
       productId: 34,
@@ -373,7 +341,6 @@ export const items: Product[] = [
       fullPrice: 70.85,
       discountPrice: 50.47,
       createdDate: "2021-11-13T23:19:33.313Z",
-      active: true,
     },
     {
       productId: 35,
@@ -384,6 +351,15 @@ export const items: Product[] = [
       fullPrice: 1444.0,
       discountPrice: 1000.85,
       createdDate: "2021-11-13T22:11:33.313Z",
-      active: true,
+    },
+    {
+      productId: 36,
+      color: "Kırmızı",
+      brand: "Spigen",
+      image: "/assets/red_case.svg",
+      name: "Red Spigen Iphone 11 Kılıf Garantili",
+      fullPrice: 194.0,
+      discountPrice: 162.12,
+      createdDate: "2021-11-13T24:20:33.313Z",
     },
   ];

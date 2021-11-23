@@ -1,12 +1,13 @@
-import React from 'react';
+import  { Dispatch, SetStateAction } from 'react';
 import SidebarColors from './sidebarColors';
 import SidebarSorting from './sidebarSorting';
 import SidebarBrands from './sidebarBrands';
 import './sidebar.scss'
+import { Sorting } from '../../modals/Sorting';
 
 interface Props{
-    sorting: any[],
-    setSorting: Function
+    sorting: Sorting[],
+    setSorting: Dispatch<SetStateAction<Sorting[]>>
 }
 const Sidebar = ({sorting, setSorting}: Props) => {
     return (
@@ -21,7 +22,7 @@ const Sidebar = ({sorting, setSorting}: Props) => {
             </div>
             <p className="sidebar_title">Marka</p>
             <div className="sidebar_item">
-                <SidebarBrands />
+                <SidebarBrands/>
             </div>
         </div>
     )

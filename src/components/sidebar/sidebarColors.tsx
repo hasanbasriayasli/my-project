@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import "./sidebar.scss";
 import { Context } from "../../App";
+import { Color } from "../../modals/Color";
 
 const SidebarColors = () => {
   const { colors, dispatch } = useContext<any>(Context);
@@ -14,7 +15,7 @@ const SidebarColors = () => {
   return (
     <nav className="nav">
       <ul className="nav-items">
-        {colors?.map((item: any, index: any) => (
+        {colors?.map((item: Color, index: number) => (
           <li
             key={index}
             className={`nav_items_item ${
