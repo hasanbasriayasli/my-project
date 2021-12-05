@@ -18,7 +18,7 @@
         z-index: 3;
         transition: height 0.2s linear;
         background-color: $white;
-        padding-top: 5px;
+        padding: 2px;
 
         &:hover {
             height: 465px;
@@ -34,10 +34,8 @@
             position: absolute;
             z-index: 2;
             bottom: 10px;
-            right: 15px;
-            left: 15px;
             .btn{
-                width: 100%;
+                width: 223px;
                 border: none;
                 border-radius: 5px;
                 padding: 6px 0;
